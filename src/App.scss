@@ -1,0 +1,47 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+
+  .app-grid{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+}
+
+.react-grid-layout {
+  position: static;
+
+  .react-grid-item {
+    border: 1px solid #000000;
+    user-select: none;
+    cursor: pointer;
+    background: aliceblue;
+
+    &.static {
+      background-color: #ffdddd;
+    }
+
+    &.react-draggable-dragging {
+      z-index: 1;
+    }
+
+    &.resizable {
+      .react-resizable-handle {
+        cursor: nwse-resize;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &.react-grid-placeholder {
+      background-color: rgba(94, 160, 4, 0.11);
+      border: none;
+    }
+  }
+}
